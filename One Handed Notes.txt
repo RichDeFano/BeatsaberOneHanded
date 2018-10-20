@@ -1,0 +1,58 @@
+Read in json info file
+create new folder with name = OneSaber - Name
+info.json = make two difficulty files - Easy(Right Handed) and Medium(Left Handed)
+Easy.json is a copy of old expert.json
+	--If a note color is red, change it to blue. (all zeros go to ones)
+Medium.json is a copy of old expert.json
+	--If a note color is blue, change it to red. (all ones go to zeroes)
+
+
+FilePath[0] = easy
+[1] = medium
+[2] = hard
+[3] = expert
+[4] = expert+
+
+
+if a note is at the same time as another
+set all their cut directions to the same?
+
+< <
+> > 
+would be 
+< < 
+< <
+
+
+take the red one and match it to the blue? find the open space
+O O O O
+O O O O
+O O O O
+
+/*
+if theres more than one note per time interval
+	if theres more than only blue notes
+		if there is only one blue and one red
+			rotate the red and add it to the blue
+		if theres more reds then blue
+			delete the blue
+		if theres multiple reds and multiple blues
+			delete the reds
+
+if cutDir == > and theres space to the left, 
+	move it to the left and put cutDir = blue cutDir
+if cutDir == > and theres space to the right
+	move it to the right and put cutDir = blue cutDir
+
+same for all 8 directions?
+_cutDirection: the direction which the note has to be cut 
+0 is cut up, 
+1 is cut down, 
+2 is cut left, 
+3 is cut right, 
+4 is cut up left, 
+5 is cut up right, 
+6 is cut down left, 
+7 is cut down right, 
+8 is cut any direction
+*/
